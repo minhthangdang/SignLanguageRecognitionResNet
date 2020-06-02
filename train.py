@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelBinarizer
 from utils_resnet import load_dataset
-from model import ResNet50
+from model import ResNet18
 
 import keras.backend as K
 K.set_image_data_format('channels_last')
@@ -37,7 +37,7 @@ print ("X_test shape: " + str(X_test.shape))
 print ("Y_test shape: " + str(Y_test.shape))
 
 # train the neural network
-model = ResNet50(input_shape = (28, 28, 1), classes = 24)
+model = ResNet18(input_shape = (28, 28, 1), classes = 24)
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 model.fit(X_train, Y_train, epochs = 2, batch_size = 32)
 

@@ -5,11 +5,9 @@ from keras.models import Model, load_model
 from keras.initializers import glorot_uniform
 from utils_resnet import identity_block, convolutional_block
 
-def ResNet50(input_shape = (28, 28, 1), classes = 24):
+def ResNet18(input_shape = (28, 28, 1), classes = 24):
     """
-    Implementation of the popular ResNet50 the following architecture:
-    CONV2D -> BATCHNORM -> RELU -> MAXPOOL -> CONVBLOCK -> IDBLOCK*2 -> CONVBLOCK -> IDBLOCK*3
-    -> CONVBLOCK -> IDBLOCK*5 -> CONVBLOCK -> IDBLOCK*2 -> AVGPOOL -> TOPLAYER
+    Implementation of the popular ResNet18
 
     Arguments:
     input_shape -- shape of the images of the dataset
@@ -56,6 +54,6 @@ def ResNet50(input_shape = (28, 28, 1), classes = 24):
     X = Dense(classes, activation='softmax', name='fc' + str(classes), kernel_initializer = glorot_uniform(seed=0))(X)
     
     # Create model
-    model = Model(inputs = X_input, outputs = X, name='ResNet50')
+    model = Model(inputs = X_input, outputs = X, name='ResNet18')
 
     return model
