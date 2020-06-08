@@ -168,4 +168,12 @@ And here is the result:
 
 <img src="https://github.com/minhthangdang/minhthangdang.github.io/blob/master/resnet-results.JPG?raw=true" alt="ResNet-18 results" /><br>
 
-It achieved 97.99% accuracy on training set and 85.58% accuracy on test set. Compared to <a href="https://github.com/minhthangdang/SignLanguageRecognitionCNN">my previous LeNet-5 model</a>, this is more complicated and slower, but has not better performance. However the point of this exercise is not to find a better model, but to experiment with different models.
+It achieved 97.99% accuracy on training set and 85.58% accuracy on test set. 
+
+If the number of epochs is increased to 10:
+
+<img src="https://github.com/minhthangdang/minhthangdang.github.io/blob/master/resnet18-10epochs-train.JPG?raw=true" alt="ResNet-18 10 epochs results" /><br>
+
+<img src="https://github.com/minhthangdang/minhthangdang.github.io/blob/master/resnet18-10epochs-test.JPG?raw=true" alt="ResNet-18 10 epochs results" /><br>
+
+I achieved 99.36% accuracy on training set and 92.31% accuracy on test set.
